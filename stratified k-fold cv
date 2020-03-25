@@ -1,0 +1,7 @@
+from sklearn.model_selection import StratifiedKFold
+skf = StratifiedKFold(n_splits=5, random_state=None)
+# X is the feature set and y is the target
+for train_index, test_index in skf.split(X,y): 
+    print("Train:", train_index, "Validation:", val_index) 
+    X_train, X_test = X[train_index], X[val_index] 
+    y_train, y_test = y[train_index], y[val_index]
